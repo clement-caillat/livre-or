@@ -1,0 +1,158 @@
+@keyframes arrow_anim
+{
+    0%, 100% {top: 85%}
+    50% {top: 90%}
+}
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+html
+{
+    height: 100%;
+    width: 100%;
+}
+body
+{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    font-family: 'Courgette', cursive;
+    color: white;
+}
+nav
+{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(22, 22, 22);
+    position: fixed;
+    transition-property: background;
+    transition-duration: 1s;
+}
+nav:hover
+{
+    background-color: #333;
+}
+nav:hover #liens a
+{
+    color: white;
+}
+nav #user
+{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav #user img
+{
+    margin-left: 10%;
+    margin-top: 10%;
+    width: 30%;
+    height: 60%;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+nav #user h2
+{
+    margin-left: 13%;
+    margin-top: 20%;
+}
+nav #liens
+{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+nav #liens a
+{
+    margin: 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition-property: color;
+    transition-duration: 1s;
+}
+nav #liens a:hover
+{
+    color: rgb(131, 131, 131);
+}
+main
+{
+    margin-left: 20%;
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+main header
+{
+    height: 100%;
+    width: 100%;
+    background-image: url('images/backgrounds/header.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+main header img
+{
+    position: sticky;
+    height: 10%;
+    width: 8%;
+    left: 46%;
+    top: 85%;
+    animation: arrow_anim 4s infinite;
+}
+
+main section
+{
+    height: 100%;
+    width: 100%;
+    background-image: url('images/backgrounds/section.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+main section img
+{
+    position: sticky;
+    height: 10%;
+    width: 8%;
+    left: 46%;
+    transform: rotate(180deg);
+    animation: arrow_anim 4s infinite;
+}
+main section article
+{
+    min-width: 500px;
+    min-height: 500px;
+    height: 70%;
+    width: 70%;
+    padding: 1%;
+    background-color: rgb(51, 51, 51);
+    display: flex;
+    margin-left: 15%;
+}
+main section article #title
+{
+    height: 10%;
+    width: 100%;
+    border: 1px solid rgb(66, 66, 66);
+    background-color: rgb(32, 32, 32);
+    border-radius: 10px;
+}
+
+main section article h1
+{
+    font-family: 'Courgette', cursive;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 1%;
+    color: white;
+}
