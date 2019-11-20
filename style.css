@@ -3,8 +3,29 @@
     0%, 100% {top: 85%}
     50% {top: 90%}
 }
+@keyframes logo_rotate
+{
+    0%, 100%{transform: rotate(0deg);}
+    50%{transform: rotate(360deg);}
+}
 @import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
-
+::-webkit-scrollbar
+{
+    width: 1.5%;
+}
+::-webkit-scrollbar-track
+{
+    background-color: #333;
+}
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: rgb(70, 70, 70);
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: rgb(85, 85, 85);
+}
 html
 {
     height: 100%;
@@ -155,11 +176,178 @@ main#main_index section article h1
 }
 
 /* PAGE REGISTER */
+body#register_body
+{
+    background-image: url('ressources/images/backgrounds/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
 main#register_content
 {
-    height: 60%;
+    height: 45%;
     width: 30%;
-    background-color: red;
+    background-color: #333;
+    border: 2px solid rgb(97, 58, 189);
+    border-radius: 10px;
     margin-left: 35%;
     margin-top: 10%;
+}
+
+main#register_content img
+{
+    position: absolute;
+    border: 2px solid rgb(97, 58, 189);
+    top: 13%;
+    left: 46%;
+    width: 8%;
+    height: 15%;
+    border-radius: 100%;
+    animation: logo_rotate 5s forwards;
+}
+main#register_content form 
+{
+    margin-top: 13%;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    justify-content: space-around;
+}
+main#register_content form input
+{
+    width: 68%;
+    background-color: rgb(31, 31, 31);
+    border: 2px solid rgb(97, 58, 189);
+    font-size: 20px;
+    border-radius: 7px;
+    padding: 1%;
+    text-align: center;
+    color: snow;
+    outline: none;
+    transition-property: border;
+    transition-duration: 300ms;
+}
+main#register_content form input:focus
+{
+    border-color: rgb(120, 96, 255);
+}
+main#register_content form input::placeholder
+{
+    color: rgb(116, 98, 158);
+}
+main#register_content form input[type="submit"]
+{
+    width: 40%;
+    margin-left: 15%;
+    outline: none;
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: 500ms;
+}
+main#register_content form input[type="submit"]:hover
+{
+    background-color: rgb(22, 7, 56);
+}
+main#register_content form input[type="submit"]:focus
+{
+    background-color: black;  
+}
+main#register_content form p
+{
+    color: red;
+    margin: 0;
+    width: 68%;
+    text-align: center;
+}
+main#register_content form a
+{
+    text-decoration: none;
+    color: white;
+}
+#main_livre-or
+{
+    margin-left: 20%;
+    height: 100%;
+    width: 80%;
+    background-image: url('ressources/images/backgrounds/background.jpg');
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: 40%;
+}
+main#main_livre-or section#section_livre-or
+{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+main#main_livre-or section#section_livre-or .post
+{
+    width: 56%;
+    height: 36%;
+    padding: 2%;
+    background-color: #333;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    border-radius: 10px;
+    border: 2px solid rgb(97, 58, 189);
+}
+main#main_livre-or section#section_livre-or .post #user_info
+{
+    width: 100%;
+}
+main#main_livre-or section#section_livre-or .post #user_info h1
+{
+    margin: 0;
+    text-align: center;
+    color: rgb(164, 148, 255);
+    border-bottom: 1px solid rgb(120, 96, 255);
+}
+main#main_livre-or section#section_livre-or .post #user_message
+{
+    padding: 2%;
+    border-radius: 5px;
+    height: 82%;
+    width: 96%;
+}
+main#main_livre-or section#section_livre-or .post #user_message p
+{
+    margin: 0;
+}
+main#main_livre-or section#section_livre-or .post #user_message textarea::placeholder
+{
+    color: rgb(90, 90, 90);
+}
+main#main_livre-or section#section_livre-or .post #user_message form
+{
+    width: 100%;
+    height: 100%;
+}
+main#main_livre-or section#section_livre-or .post #user_message form textarea
+{
+    resize: none;
+    border: none;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    width: 98%;
+    height: 88%;
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
+    outline: none;
+    padding: 1%;
+}
+main#main_livre-or section#section_livre-or .post #user_message form input
+{
+    width: 20%;
+    margin-left: 40%;
+    border: 2px solid rgb(120, 96, 255);
+    background-color: rgb(31, 31, 31);
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 0.5%;
+    color: white;
+    cursor: pointer;
+    outline: none;
 }
