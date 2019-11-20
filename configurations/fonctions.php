@@ -72,8 +72,17 @@
         mysqli_query($db, "INSERT INTO commentaires (commentaire, id_utilisateur, date) VALUES ('$comment', '$id', '$date')");
         header('Location: livre-or.php');
     }
-
-
+    
+    function modify()
+    {
+        $db = $_SESSION['db'];
+        $id = $_SESSION['id'];
+        $username = $_POST['username'];
+        $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        mysqli_query($db, "UPDATE utilisateurs SET login='$username', password='$password' WHERE id='$id'");
+        $msg = "Vos informations ont bien été changées";
+        return($msg);
+    }
 
 
 

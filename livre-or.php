@@ -2,6 +2,9 @@
     include('configurations/config.php');
     include('configurations/fonctions.php');
     $db = $_SESSION['db'];
+    $query = mysqli_query($db, "SELECT commentaires.commentaire, commentaires.date, utilisateurs.login FROM commentaires INNER JOIN utilisateurs WHERE commentaires.id_utilisateur = utilisateurs.id ORDER BY commentaires.id DESC");
+    $result = mysqli_fetch_all($query);
+    
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,7 +23,6 @@
         </div>
         <div id="liens">
             <a href="index.php">Accueil</a>
-            <a href="videos.php">Vidéos</a>
             <a href="livre-or.php">Livre d'or</a>
             <a href="commentaire.php">Poster un commentaire</a>
             <?php if(isset($login)){echo "<a href=\"index.php?disc\" style=\"color: red;\">Se déconnecter</a>";}else{ echo "<a href=\"login.php\">Inscription/Connexion</a>";} ?>
@@ -28,22 +30,32 @@
     </nav>
     <main id="main_livre-or">
         <section id="section_livre-or">
-            <div class="post">
-                <div id="user_info">
-                    <h1>Utilisateur</h1>
-                </div>
-                <div id="user_message">
-                    <p>Coucou c'est mon message</p>
-                </div>
-            </div>
-            <div class="post">
-            <div id="user_info">
-                    <h1>Utilisateur</h1>
-                </div>
-                <div id="user_message">
-                    <p>Coucou c'est mon message</p>
-                </div>
-            </div>
+            <?php 
+                if(!empty($result))
+                {
+                    $i = 0;
+                    foreach($result as $key)
+                    {
+                        $commentaire = $result[$i][0];
+                        $date = $result[$i][1];
+                        $auteur = $result[$i][2];
+                        echo "<div class=\"post\">
+                        <div id=\"user_info\">
+                        <p style=\"margin: 0; color: violet;\">$date</p>
+                        <h1>$auteur</h1>
+                        </div>
+                        <div id=\"user_message\">
+                        <p>$commentaire</p>
+                        </div>
+                        </div>";
+                    $i++;
+                    }
+                }
+                else
+                {
+                    echo "<h1 style=\"text-align: center;\">Aucun commentaire n'a été posté, revenez plus tard ;)</h1>";
+                }
+            ?>
         </section>
     </main>
 </body>

@@ -28,7 +28,6 @@
         </div>
         <div id="liens">
             <a href="index.php">Accueil</a>
-            <a href="videos.php">Vidéos</a>
             <a href="livre-or.php">Livre d'or</a>
             <a href="commentaire.php">Poster un commentaire</a>
             <?php if(isset($login)){echo "<a href=\"index.php?disc\" style=\"color: red;\">Se déconnecter</a>";}else{ echo "<a href=\"login.php\">Inscription/Connexion</a>";} ?>
@@ -36,7 +35,7 @@
     </nav>
     <main id="main_livre-or">
         <section id="section_livre-or">
-            <div class="post" style="margin-top: 19%;">
+            <div class="post" id="create_post"style="margin-top: 19%;">
                 <div id="user_info">
                     <h1><?php echo $login ?></h1>
                 </div>

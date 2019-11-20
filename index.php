@@ -23,7 +23,6 @@
         </div>
         <div id="liens">
             <a href="index.php">Accueil</a>
-            <a href="videos.php">Vidéos</a>
             <a href="livre-or.php">Livre d'or</a>
             <a href="commentaire.php">Poster un commentaire</a>
             <?php if(isset($login)){echo "<a href=\"index.php?disc\" style=\"color: red;\">Se déconnecter</a>";}else{ echo "<a href=\"login.php\">Inscription/Connexion</a>";} ?>
@@ -31,13 +30,20 @@
     </nav>
     <main id="main_index">
         <header id="haut">
-            <a href="index.php#bas"><img src="ressources/images/divers/arrow.png"></a>
+            <a href="#bas"><img src="ressources/images/divers/arrow.png"></a>
         </header>
         <section id="bas">
-            <a href="index.php#haut"><img src="ressources/images/divers/arrow.png"></a>
+            <a href="#haut"><img src="ressources/images/divers/arrow.png"></a>
             <article>
                 <div id="title">
                     <h1>Tomorrowland Winter 2019 Edition</h1>
+                </div>
+                <div id="content">
+                    <p>Bienvenue sur le livre d'or de Tomorrowland Winter Édition 2019 vous pouvez lire les commentaires laissés par les fans et poster le votre.</p>
+                    <video autoplay muted loop>
+                        <source src="ressources/videos/presentation.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas les vidéos
+                    </video>
                 </div>
             </article>
         </section>
