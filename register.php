@@ -8,6 +8,10 @@ $error = "";
 
         $error = register();
     }
+    if(isset($login))
+    {
+        header('Location: index.php');
+    }
 ?>
 
 <!DOCTYPE html>

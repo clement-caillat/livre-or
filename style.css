@@ -299,51 +299,53 @@ main#main_livre-or section#section_livre-or
     width: 100%;
     height: 100%;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 main#main_livre-or section#section_livre-or .post
 {
+    align-self: center;
     width: 56%;
     height: 16%;
     padding: 2%;
     background-color: #333;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 20%;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 10px;
     border: 2px solid rgb(97, 58, 189);
 }
-main#main_livre-or section#section_livre-or .post #user_info
+main#main_livre-or section#section_livre-or .post .user_info
 {
     width: 100%;
 }
-main#main_livre-or section#section_livre-or .post #user_info h1
+main#main_livre-or section#section_livre-or .post .user_info h3
 {
     margin: 0;
     text-align: center;
     color: rgb(240, 182, 255);
     border-bottom: 1px solid rgb(120, 96, 255);
 }
-main#main_livre-or section#section_livre-or .post #user_message
+main#main_livre-or section#section_livre-or .post .user_message
 {
     padding: 2%;
     border-radius: 5px;
     height: 82%;
     width: 96%;
 }
-main#main_livre-or section#section_livre-or .post #user_message p
+main#main_livre-or section#section_livre-or .post .user_message p
 {
     margin: 0;
 }
-main#main_livre-or section#section_livre-or .post #user_message textarea::placeholder
+main#main_livre-or section#section_livre-or .post .user_message textarea::placeholder
 {
     color: rgb(90, 90, 90);
 }
-main#main_livre-or section#section_livre-or .post #user_message form
+main#main_livre-or section#section_livre-or .post .user_message form
 {
     width: 100%;
     height: 100%;
 }
-main#main_livre-or section#section_livre-or .post #user_message form textarea
+main#main_livre-or section#section_livre-or .post .user_message form textarea
 {
     resize: none;
     border: none;
@@ -356,7 +358,7 @@ main#main_livre-or section#section_livre-or .post #user_message form textarea
     outline: none;
     padding: 1%;
 }
-main#main_livre-or section#section_livre-or .post #user_message form input
+main#main_livre-or section#section_livre-or .post .user_message form input
 {
     width: 20%;
     margin-left: 40%;

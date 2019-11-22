@@ -40,11 +40,11 @@
                         $date = $result[$i][1];
                         $auteur = $result[$i][2];
                         echo "<div class=\"post\">
-                        <div id=\"user_info\">
+                        <div class=\"user_info\">
                         <p style=\"margin: 0; color: violet;\">$date</p>
-                        <h1>$auteur</h1>
+                        <h3>$auteur</h3>
                         </div>
-                        <div id=\"user_message\">
+                        <div classe=\"user_message\">
                         <p>$commentaire</p>
                         </div>
                         </div>";
