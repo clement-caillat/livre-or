@@ -37,10 +37,10 @@
         <section id="section_livre-or">
             <div class="post" id="create_post"style="margin-top: 19%;">
                 <div id="user_info">
-                    <h1><?php echo $login ?></h1>
+                    <h3 style="text-align: center; color: violet;"><?php echo $login ?></h3>
                 </div>
-                <div id="user_message">
-                    <form action="commentaire.php" method="get">
+                <div class="user_message">
+                    <form action="commentaire.php" method="get" style="height: 80%;">
                       <textarea name="comment" placeholder="Votre message"></textarea>
                       <input type="submit" name="post_comment" value="Poster">
                     </form>
